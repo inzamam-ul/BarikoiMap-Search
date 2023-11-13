@@ -88,6 +88,10 @@ const GeoAutoComplete = () => {
           backgroundColor: colorMode === "light" ? "" : "gray",
           color: colorMode === "light" ? "" : "white",
         }),
+        singleValue: (baseStyles) => ({
+          ...baseStyles,
+          color: colorMode === "light" ? "" : "white",
+        }),
         input: (baseStyles) => ({
           ...baseStyles,
           color: colorMode === "light" ? "" : "white",
@@ -118,6 +122,14 @@ const GeoAutoComplete = () => {
           },
         }),
         noOptionsMessage: (baseStyles) => ({
+          ...baseStyles,
+          color: colorMode === "light" ? "" : "white",
+        }),
+        loadingIndicator: (baseStyles) => ({
+          ...baseStyles,
+          color: colorMode === "light" ? "" : "white",
+        }),
+        loadingMessage: (baseStyles) => ({
           ...baseStyles,
           color: colorMode === "light" ? "" : "white",
         }),
