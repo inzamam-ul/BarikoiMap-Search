@@ -102,7 +102,7 @@ const MapComponent = () => {
       <NavigationControl />
       <ScaleControl />
 
-      <AttributionControl customAttribution="Map design by Inzamam" />
+      <AttributionControl customAttribution="Developed by Inzamam" />
     </ReactMapGL>
   );
 };
