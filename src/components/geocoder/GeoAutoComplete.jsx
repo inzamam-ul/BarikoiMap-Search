@@ -21,7 +21,7 @@ const GeoAutoComplete = () => {
   const {
     dispatch,
     mapRef,
-    state: { selectedLocation },
+    state: { selectedLocation, colorMode },
   } = useValue();
 
   const promiseOptions = async (inputValue) => {
@@ -82,6 +82,46 @@ const GeoAutoComplete = () => {
         setHoveredLocation(newValue, dispatch);
       }}
       value={selectedLocation}
+      styles={{
+        control: (baseStyles) => ({
+          ...baseStyles,
+          backgroundColor: colorMode === "light" ? "" : "gray",
+          color: colorMode === "light" ? "" : "white",
+        }),
+        input: (baseStyles) => ({
+          ...baseStyles,
+          color: colorMode === "light" ? "" : "white",
+        }),
+        placeholder: (baseStyles) => ({
+          ...baseStyles,
+          color: colorMode === "light" ? "" : "white",
+        }),
+        menuList: (baseStyles) => ({
+          ...baseStyles,
+          backgroundColor: colorMode === "light" ? "" : "gray",
+          color: colorMode === "light" ? "" : "white",
+        }),
+        option: (baseStyles, state) => ({
+          ...baseStyles,
+          color: state.isSelected
+            ? colorMode === "light"
+              ? "black"
+              : "white"
+            : "",
+          backgroundColor: state.isSelected
+            ? colorMode === "light"
+              ? "lightGray"
+              : "black"
+            : "",
+          ":hover": {
+            backgroundColor: colorMode === "light" ? "lightBlue" : "navy", // Add your hover styles here
+          },
+        }),
+        noOptionsMessage: (baseStyles) => ({
+          ...baseStyles,
+          color: colorMode === "light" ? "" : "white",
+        }),
+      }}
     />
   );
 };
