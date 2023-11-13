@@ -61,30 +61,14 @@ const GeoAutoComplete = () => {
             <Chip sx={{ borderRadius: 1 }} label={props?.data?.pType} />
           </Typography>
         </Box>
-        {/* <div
-          onMouseEnter={() => {
-            setHoveredLocation(props.data, dispatch);
-            mapRef.current?.setCenter({
-              lat: props.data.latitude,
-              lng: props.data.longitude,
-            });
-          }}
-        >
-          <div>{props?.data?.label.split(",")[0]}</div>
-          <div className="">
-            {props?.data?.area}, {props?.data?.city}
-          </div>
-
-          <div className="flex items-center justify-start gap-1">
-            {props?.data?.pType}
-          </div>
-        </div> */}
       </components.Option>
     );
   };
+
   Option.propTypes = {
     data: PropTypes.object,
   };
+
   return (
     <AsyncSelect
       placeholder="Search"

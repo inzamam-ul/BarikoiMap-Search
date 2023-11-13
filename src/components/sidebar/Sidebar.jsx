@@ -30,7 +30,7 @@ const Sidebar = ({ open, drawerWidth, handleDrawerClose }) => {
     dispatch,
   } = useValue();
   const theme = useTheme();
-  console.log({ selectedLocation });
+
   return (
     <Drawer
       onMouseLeave={() => {

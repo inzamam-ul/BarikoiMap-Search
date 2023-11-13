@@ -88,11 +88,13 @@ export default function MapContainer() {
           </IconButton>
         </Toolbar>
       </AppBar>
+
       <Sidebar
         open={open}
         drawerWidth={drawerWidth}
         handleDrawerClose={handleDrawerClose}
       />
+
       <Main open={open}>
         <MapComponent />
       </Main>

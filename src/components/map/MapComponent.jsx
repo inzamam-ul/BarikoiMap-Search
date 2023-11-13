@@ -53,15 +53,16 @@ const MapComponent = () => {
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [geoControlRef.current]);
+
   useEffect(() => {
-    // Activate as soon as the control is loaded
+    // Recenter the marker to the selected location while hovered location is empty
     if (!hoveredLocation && selectedLocation)
       mapRef.current?.setCenter({
         lat: selectedLocation?.latitude,
         lng: selectedLocation?.longitude,
       });
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [hoveredLocation]);
+  }, [hoveredLocation, mapRef.current]);
 
   console.log(selectedLocation);
   return (

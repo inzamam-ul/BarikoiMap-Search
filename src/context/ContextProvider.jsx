@@ -1,10 +1,4 @@
-import React, {
-  createContext,
-  useContext,
-  useEffect,
-  useReducer,
-  useRef,
-} from "react";
+import React, { createContext, useContext, useReducer, useRef } from "react";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 import PropTypes from "prop-types";
@@ -43,20 +37,6 @@ const ContextProvider = ({ children }) => {
       }),
     [state.colorMode]
   );
-
-  useEffect(() => {
-    //   if (room) {
-    //     dispatch({ type: "UPDATE_LOCATION", payload: room.location });
-    //     dispatch({ type: "UPDATE_DETAILS", payload: room.details });
-    //     dispatch({ type: "UPDATE_IMAGES", payload: room.images });
-    //     dispatch({ type: "UPDATE_UPDATED_ROOM", payload: room.updatedRoom });
-    //     dispatch({
-    //       type: "UPDATE_DELETED_IMAGES",
-    //       payload: room.deletedImages,
-    //     });
-    //     dispatch({ type: "UPDATE_ADDED_IMAGES", payload: room.addedImages });
-    //   }
-  }, []);
 
   return (
     <Context.Provider
