@@ -133,6 +133,10 @@ const GeoAutoComplete = () => {
           ...baseStyles,
           color: colorMode === "light" ? "" : "white",
         }),
+        clearIndicator: (baseStyles) => ({
+          ...baseStyles,
+          color: colorMode === "light" ? "" : "white",
+        }),
       }}
     />
   );
